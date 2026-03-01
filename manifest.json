@@ -1,0 +1,13 @@
+{
+    "appstore": [
+        "app.manifest.json5",
+        "appInstaller.js",
+        "index.html"
+    ],
+    "testApp": [
+        "app.manifest.json5",
+        "index.js",
+        "icon-16.png",
+        "icon-32.png"
+    ]
+}
