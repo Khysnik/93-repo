@@ -165,27 +165,7 @@
 
 		function resolveRepoFetchBaseUrl(repoUrl) {
 			const normalized = normalizeRepoUrl(repoUrl);
-
-			try {
-				const parsed = new URL(normalized);
-				if (parsed.hostname.toLowerCase() !== 'github.com') {
-					return normalized;
-				}
-
-				const segments = parsed.pathname
-					.split('/')
-					.filter(Boolean);
-
-				if (segments.length < 2) {
-					return normalized;
-				}
-
-				const owner = segments[0];
-				const repoName = segments[1].replace(/\.git$/i, '');
-				return `https://raw.githubusercontent.com/${owner}/${repoName}/refs/heads/main`;
-			} catch (error) {
-				return normalized;
-			}
+			return normalized;
 		}
 
 		function normalizeAppPath(pathValue) {
@@ -193,6 +173,14 @@
 		}
 
 		function parseAppManifest(text) {
+			if (window.JSON5 && typeof window.JSON5.parse === 'function') {
+				return window.JSON5.parse(text);
+			}
+
+			return JSON.parse(text);
+		}
+
+		function parseRepoManifest(text) {
 			if (window.JSON5 && typeof window.JSON5.parse === 'function') {
 				return window.JSON5.parse(text);
 			}
@@ -231,7 +219,8 @@
 							continue;
 						}
 
-						const repoManifest = await manifestResponse.json();
+						const repoManifestText = await manifestResponse.text();
+						const repoManifest = parseRepoManifest(repoManifestText);
 
 						if (!repoManifest || typeof repoManifest !== 'object' || Array.isArray(repoManifest)) {
 							failedRepos += 1;
