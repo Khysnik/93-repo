@@ -1,0 +1,12 @@
+{
+    "name": "Repo93",
+    "slug": "repo93appstore",
+    "command": "appstore",
+    "categories": [],
+    "description": "it's an appstore", // todo: credits and stuff type shit
+    "icons": [],
+    "width": 500,
+    "height": 300,
+
+    document: "./index.html"
+}
