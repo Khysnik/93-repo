@@ -1,12 +1,8 @@
 {
-    "name": "Repo93",
-    "slug": "repo93appstore",
+    "name": "Appstore",
+    "slug": "w93appstore",
     "command": "appstore",
-    "categories": [],
-    "description": "it's an appstore", // todo: credits and stuff type shit
-    "icons": [],
-    "width": 500,
-    "height": 300,
+    "description": "It's an appstore for windows93 (duh)",
 
-    document: "./index.html"
+    "module": "./app.js"
 }
