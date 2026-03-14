@@ -3,6 +3,8 @@
     "slug": "w93appstore",
     "command": "appstore",
     "description": "It's an appstore for windows93 (duh)",
+    "width": 500,
+    "height": 300,
 
     "module": "./app.js"
 }

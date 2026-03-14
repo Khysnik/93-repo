@@ -2,6 +2,7 @@
     "appstore": [
         "app.manifest.json5",
         "appInstaller.js",
-        "index.html"
-    ],
+        "app.js",
+        "repos.json"
+    ]
 }
