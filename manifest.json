@@ -3,6 +3,8 @@
         "app.manifest.json5",
         "appInstaller.js",
         "app.js",
-        "repos.json"
+        "repos.json",
+        "icons/icon-16.png",
+        "icons/icon-32.png"
     ]
 }
