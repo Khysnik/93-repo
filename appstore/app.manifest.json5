@@ -1,12 +1,15 @@
 {
-    "name": "Repo93",
-    "slug": "repo93appstore",
+    "name": "Appstore",
+    "slug": "w93appstore",
     "command": "appstore",
-    "categories": [],
-    "description": "it's an appstore", // todo: credits and stuff type shit
-    "icons": [],
+    "description": "It's an appstore for windows93 (duh)",
     "width": 500,
     "height": 300,
+    // "icons": [
+    //     {"size": "16", "url": "./icons/icon16.png"},
+    //     {"size": "32", "url": "./icons/icon32.png"},
+    // ],
+    "desktop": true,
 
-    document: "./index.html"
+    "module": "./app.js"
 }

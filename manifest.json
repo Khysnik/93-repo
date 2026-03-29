@@ -1,7 +1,0 @@
-{
-    "appstore": [
-        "app.manifest.json5",
-        "appInstaller.js",
-        "index.html"
-    ],
-}
